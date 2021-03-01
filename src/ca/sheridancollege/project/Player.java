@@ -11,6 +11,7 @@ package ca.sheridancollege.project;
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  * @author Megha Patel
+ * @author Martin Matov
  */
 public abstract class Player {
 
