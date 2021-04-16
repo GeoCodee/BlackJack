@@ -1,26 +1,37 @@
 /**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
+ * Assignment: Deliverable 3: Group 4
+ * SYST17796
+ * Description: Java program that models a game of blackjack using OOP.
  */
+
 package ca.sheridancollege.project;
 
 /**
- * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
- * game. Students wishing to add to the code should remember to add themselves as a modifier.
- *
- * @author dancye
- * @author Megha Patel
+ * Class to represent a card in deck. Each card consist of a suit and a value.
  */
-public abstract class Card {
-    //default modifier for child classes
+public class Card {
+
+    private Suit suit;
+    private Value value;
+
+    public Card(Suit mySuit, Value myValue) {
+        this.suit = mySuit;
+        this.value = myValue;
+    }
+
+    public Value getValue() {
+        return this.value;
+    }
+
+    public Suit getSuit() {
+        return this.suit;
+    }
 
     /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+     *@return a String representation of the card.
      */
-    @Override
-    public abstract String toString();
+    public String toString() {
+        return this.value.toString() + " OF " + this.suit.toString();
+    }
 
 }
