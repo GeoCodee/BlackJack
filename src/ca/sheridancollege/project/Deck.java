@@ -67,31 +67,31 @@ public class Deck {
 
         for (Card card: this.cards) {
             
-            if (card.getValue().equals("TWO")) {
+            if (card.getValue() == Value.TWO) {
                 totalValue += 2;
-            } else if (card.getValue().equals("THREE")) {
+            } else if (card.getValue() == Value.THREE) {
                 totalValue += 3;
-            } else if (card.getValue().equals("FOUR")) {
+            } else if (card.getValue()== Value.FOUR) {
                 totalValue += 4;
-            } else if (card.getValue().equals("FIVE")) {
+            } else if (card.getValue()== Value.FIVE) {
                 totalValue += 5;
-            } else if (card.getValue().equals("SIX")) {
+            } else if (card.getValue()== Value.SIX) {
                 totalValue += 6;
-            } else if (card.getValue().equals("SEVEN")) {
+            } else if (card.getValue()== Value.SEVEN) {
                 totalValue += 7;
-            } else if (card.getValue().equals("EIGHT")) {
+            } else if (card.getValue()== Value.EIGHT) {
                 totalValue += 8;
-            } else if (card.getValue().equals("NINE")) {
+            } else if (card.getValue()== Value.NINE) {
                 totalValue += 9;
-            } else if (card.getValue().equals("TEN")) {
+            } else if (card.getValue()== Value.TEN) {
                 totalValue += 10;
-            } else if (card.getValue().equals("JACK")) {
+            } else if (card.getValue()== Value.JACK) {
                 totalValue += 10;
-            } else if (card.getValue().equals("QUEEN")) {
+            } else if (card.getValue()== Value.QUEEN) {
                 totalValue += 10;
-            } else if (card.getValue().equals("KING")) {
+            } else if (card.getValue()== Value.KING) {
                 totalValue += 10;
-            } else if (card.getValue().equals("ACE")) {
+            } else if (card.getValue()== Value.ACE) {
                 totalValue += 11;
             }
  
@@ -101,6 +101,7 @@ public class Deck {
     }
     
     // Return a string of the list of cards
+    @Override
     public String toString() {
         String listOfCards = "";
     
