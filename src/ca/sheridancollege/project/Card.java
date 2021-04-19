@@ -30,8 +30,9 @@ public class Card {
     /**
      *@return a String representation of the card.
      */
+    @Override
     public String toString() {
-        return this.value.toString() + " OF " + this.suit.toString();
+        return this.value.toString() + " OF " + this.suit.toString()+ ",  ";
     }
 
 }

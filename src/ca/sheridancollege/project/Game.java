@@ -54,7 +54,7 @@ public class Game {
            if (sc.nextLine().equalsIgnoreCase("hit")) {
                playersHand.drawFromDeck(deck);
                System.out.println("You drew: " + playersHand.getCards(playersHand.deckSize()-1).toString());
-               if(playersHand.cardsValue() > 21) {
+               if(isBust(playersHand.cardsValue())) {
                    System.out.println("You bust :(");
                    break;
                }
@@ -67,12 +67,12 @@ public class Game {
        System.out.println("Dealer Cards: " + dealersHand.toString());
        
        // Check if the value of the dealer's hand is higher than the player's
-       if((dealersHand.cardsValue() > playersHand.cardsValue())) {
+       if(isDealerWin(dealersHand.cardsValue(),playersHand.cardsValue() )) {
            System.out.println("Dealer Wins");
        }
        
        // Check if the value of the player's hand is higher than the dealer's
-       if((playersHand.cardsValue() > dealersHand.cardsValue())) {
+       if(isPlayerWin(playersHand.cardsValue(), dealersHand.cardsValue() )) {
            System.out.println("You win");
        }
        
@@ -82,4 +82,20 @@ public class Game {
        dealersHand.moveToDeck();
        
    }
+   
+   // Checks to see if card value is greater than 21 resulting in Bust
+   public static boolean isBust(int cardValue){
+       return cardValue > 21;
+   }
+   
+   // Checks to see if dealer hand is greater than players hand
+   public static boolean isDealerWin(int dealerHandValue, int playerHandValue){
+       return dealerHandValue > playerHandValue;
+   }
+   
+   // Checks to see if players hand is greater than dealers hand
+   public static boolean isPlayerWin(int playerHandValue, int dealerHandValue){
+       return playerHandValue > dealerHandValue;
+   }
+   
 }
