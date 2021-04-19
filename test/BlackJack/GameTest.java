@@ -23,8 +23,8 @@ public class GameTest {
     @Test
     public void isBustTestGood(){
         
-        boolean isBust = Game.isBust(20);
-        assertFalse(isBust);
+        boolean isBust = Game.isBust(22);
+        assertTrue(isBust);
         System.out.println("isBustTestGood");
     }
     
@@ -35,8 +35,8 @@ public class GameTest {
     @Test
     public void isBustTestBad(){
         
-        boolean isBust = Game.isBust(22);
-        assertTrue(isBust);
+        boolean isBust = Game.isBust(20);
+        assertFalse(isBust);
         System.out.println("isBustTestBad");
     }
     
